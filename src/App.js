@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+// PROP-DRILLING --> way of pass info from parent to child and from child to child of child 
+// parent(App.js)--> child(Header.js)--> child of child(Subheader.js)
+
+
+
 import './App.css';
+import Header from './components/Header'
+
 
 function App() {
+
+  // 1. propdrilling---> task is give only header.js & other is give in subheader.js---------------
+  let task = "i am best";
+  let name ="sushma";
+  let  test ="tested";
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      {/*2. propdrilling--------------put variable & go header.js */}
+     <Header  data={{task, name, test}}/>
+    
     </div>
   );
 }
