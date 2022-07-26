@@ -2,7 +2,6 @@
 // parent(App.js)--> child(Header.js)--> child of child(Subheader.js)
 
 
-
 import './App.css';
 import Header from './components/Header'
 
